@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace ASPNET_FP.Models
@@ -46,6 +47,55 @@ namespace ASPNET_FP.Models
         public string Slug => ListingId.ToString() + '-' + HouseType.Type?.Replace(' ', '-').ToLower();
     }
 }
+=======
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPNET_FP.Models
+{
+	public class Listing
+	{
+		// properties
+		[Key]
+		public int ListingId { get; set; }
+
+		public int LandlordId { get; set; } = 1;
+
+		public int HouseTypeId { get; set; }
+		public HouseType? HouseType { get; set; }
+
+		[Required(ErrorMessage = "Please enter the address.")]
+		public string Address { get; set; }
+
+		[Required(ErrorMessage = "Please enter total area.")]
+		public double TotalArea { get; set; }
+
+		[Required(ErrorMessage = "Please enter the number of bedroom.")]
+		public int BedroomNo { get; set; }
+
+		[Required(ErrorMessage = "Please enter the number of washroom.")]
+		public int WahroomNo { get; set; }
+
+		public int ParkingNo { get; set; } = 0;
+
+		[Required(ErrorMessage = "Please describe your house.")]
+		public string Description { get; set; }
+
+		[Required(ErrorMessage = "Please enter the rental price.")]
+		public double RentalPrice { get; set; }
+
+		public DateTime ListingTime { get; set; } = DateTime.Now;
+
+		public int ValidDays { get; set; } = 30;
+
+		public bool Status { get; set; } = true;
+
+		// constructor
+		public Listing()
+		{
+		}
+	}
+}
+>>>>>>> 86fef26f3cb672ccb92a9b900a74f7f0549a018e
 =======
 ﻿using System.ComponentModel.DataAnnotations;
 
