@@ -1,0 +1,28 @@
+﻿@model ASPNET_FP.Models.PassData.AccountUpdate;
+
+@{
+}
+<form class="row g-3" method="post" action="Add">
+    <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email" id="inputEmail">
+    </div>
+    <div class="col-md-6">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password" id="inputPassword">
+    </div>
+    <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Phone</label>
+        <input type="number" class="form-control" asp-for="Phone" id="inputPhone">
+    </div>
+    <div class="col-md-6">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" id="inputName">
+    </div> 
+      <div class="col-md-6">
+        <label for="inputGender" class="form-label">Gender</label>
+        <input type="text" class="form-control" asp-for="Gender" id="inputGender">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+    
+</form>

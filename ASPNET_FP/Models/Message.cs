@@ -1,8 +1,11 @@
-﻿namespace ASPNET_FP.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPNET_FP.Models
 {
 	public class Message
 	{
-		public int NoteID { get; set; }
+        [Key]
+        public int NoteID { get; set; }
 		public int ReceiverID { get; set; }
 		public int SenderID { get; set; }
 		public DateTime CreationTime { get; set; }

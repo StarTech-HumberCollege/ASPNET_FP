@@ -1,9 +1,12 @@
-﻿namespace ASPNET_FP.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPNET_FP.Models
 {
 	public class Address
 	{
-		// properties
-		public int AddressId { get; set; }
+        // properties
+        [Key]
+        public int AddressId { get; set; }
 		public int ListingId { get; set; }
 		public int UnitNo { get; set; }
 		public int StreetNo { get; set; }

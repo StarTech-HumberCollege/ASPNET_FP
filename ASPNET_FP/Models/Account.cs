@@ -1,8 +1,11 @@
-﻿namespace ASPNET_FP.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPNET_FP.Models
 {
 	public class Account
 	{
 		// properties
+		[Key]
 		public int AcctId { get; set; }
 		public string Email { get; set; }
 		public string Password { get; set; }
