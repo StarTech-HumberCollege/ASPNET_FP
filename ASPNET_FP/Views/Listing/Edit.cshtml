@@ -1,5 +1,62 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Listing
 @{
+    string title = ViewBag.Action + " Listing";
+    ViewBag.Title = title;
 }
+
+<h2>@title</h2>
+
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="HouseTypeId">House Type</label>
+        <select asp-for="HouseTypeId" class="form-control">
+            <option value="">select a house type</option> 
+            @foreach (HouseType ht in ViewBag.HouseType)
+            {
+                <option value="@ht.HouseTypeId">@ht.Type</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address">Address</label>
+        <input asp-for="Address" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TotalArea">Total Area</label>
+        <input asp-for="TotalArea" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BedroomNo">Bedroom Number</label>
+        <input asp-for="BedroomNo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="WahroomNo">Wahroom Number</label>
+        <input asp-for="WahroomNo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ParkingNo">Parking Number</label>
+        <input asp-for="ParkingNo" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RentalPrice">Rental Price</label>
+        <input asp-for="RentalPrice" class="form-control">
+    </div>
+
+    <input type="hidden" asp-for="ListingId" />
+
+    <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
+    <a asp-controller="Listing" asp-action="Index" class="btn btn-primary">Cancel</a>
+</form>

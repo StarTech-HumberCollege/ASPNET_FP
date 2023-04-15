@@ -1,4 +1,4 @@
-﻿@model Account;
+@model Account;
 
 @{
     var success = ViewBag.Success;
@@ -6,32 +6,39 @@
 
 <h1>@success</h1>
 <form class="row g-3" method="post" asp-action="Add">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-   
-    <div class="col-md-6">
-        <label asp-for="Email" class="form-label">Email</label>
-        <input type="email" class="form-control" asp-for="Email" id="inputEmail">
-    </div>
-    <div class="col-md-6">
-        <label asp-for="Password" class="form-label">Password</label>
-        <input type="password" class="form-control" asp-for="Password" id="inputPassword">
-        
-    </div>
-    <div class="col-md-6">
-        <label asp-for="Phone" class="form-label">Phone</label>
-        <input type="number" class="form-control" asp-for="Phone" id="inputPhone">
-    </div>
-    <div class="col-md-6">
-        <label asp-for="Name" class="form-label">Name</label>
-        <input type="text" class="form-control" asp-for="Name" id="inputName">
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div> 
-      <div class="col-md-6">
-        <label asp-for="Gender" class="form-label">Gender</label>
-        <input type="text" class="form-control" asp-for="Gender" id="inputGender">
-    </div>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
     
+
+        <div asp-validation-summary="All" class="text-danger my-0"></div>
+
+        <div class="col-md-6">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input type="email" class="form-control" asp-for="Email" id="inputEmail">
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Password" class="form-label">Password</label>
+            <input type="password" class="form-control" asp-for="Password" id="inputPassword">
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Phone" class="form-label">Phone</label>
+            <input type="number" class="form-control" asp-for="Phone" id="inputPhone">
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="Name" id="inputName">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Gender" class="form-label">Gender</label>
+            <input type="text" class="form-control" asp-for="Gender" id="inputGender">
+        </div>
+    
+    <div class="col-12 col-lg-12 col-xl-12 d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <a asp-controller="Account" asp-action="Login" class="btn btn-primary ms-4">Login</a>
+    </div>
+
+
+
 </form>
 
-   

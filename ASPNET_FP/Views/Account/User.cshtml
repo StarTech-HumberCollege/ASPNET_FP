@@ -1,35 +1,30 @@
 ﻿@model Account
-@{
-    var myAccount = ViewBag.Account; //Type List<>
-}
-@*@foreach(var item in myAccount){
-    <h1>@item.Email</h1>
-    <h1>@item.Name</h1>
-    <h1>@item.Phone</h1>
-    <h1>@item.Gender</h1>
 
-}*@
 
 <form class="row g-3" method="post" asp-action="User">
     <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="col-md-6">
         <label asp-for="Name" class="form-label">Name</label>
-        <input type="text" class="form-control" asp-for="Name" id="inputName" value="@myAccount.Name">
-        <span asp-validation-for="Name" class="text-danger"></span>
+        <input class="form-control" asp-for="Name"  >
+        
     </div>
     <div class="col-md-6">
         <label asp-for="Email" class="form-label">Email</label>
-        <input type="email" class="form-control" asp-for="Email" id="inputEmail" value="@myAccount.Email">
+        <input class="form-control" asp-for="Email" >
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Password" class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password">
     </div>
     <div class="col-md-6">
         <label asp-for="Phone" class="form-label">Phone</label>
-        <input type="number" class="form-control" asp-for="Phone" id="inputPhone" value="@myAccount.Phone">
+        <input type="tel" class="form-control" asp-for="Phone" >
     </div>
    
     <div class="col-md-6">
         <label asp-for="Gender" class="form-label">Gender</label>
-        <input type="text" class="form-control" asp-for="Gender" id="inputGender" value="@myAccount.Gender">
+        <input type="text" class="form-control" asp-for="Gender">
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
 

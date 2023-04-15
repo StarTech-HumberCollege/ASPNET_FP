@@ -23,6 +23,7 @@ namespace ASPNET_FP.Controllers
             //this.myLesseeDBContext = myLesseeDBContext;
         }
 
+        // ************************************************* LOGIN UP SECTION ************************************************* 
         public IActionResult Login()
         {
             return View();
@@ -31,7 +32,7 @@ namespace ASPNET_FP.Controllers
         [HttpGet]
         public IActionResult Login(String email = "")
         {
-            var model = new LoginViewModel { Email = email };
+            var model = new LoginViewModel(email);
             return View(model);
 
         }
@@ -45,11 +46,7 @@ namespace ASPNET_FP.Controllers
             if (ModelState.IsValid)
             {
                 var myAccount = myLesseeDBContext.Accounts.Where(user => user.Email == loginViewModel.Email).ToList();
-
-                //Send an Account object with the data
-                ViewBag.Account = myAccount[0];
-
-                return View("User");
+               return View("User", myAccount[0]); 
 
 
             }
@@ -60,14 +57,26 @@ namespace ASPNET_FP.Controllers
             }
         }
 
-
-        [HttpGet]
-        public IActionResult User()
+        // ************************************************* USER UP SECTION ************************************************* 
+      
+        [HttpPost]
+        public IActionResult User(Account account)
         {
-            return View();
+            if(ModelState.IsValid)
+            {
+                var emailIsInUse = myLesseeDBContext.Accounts.Where(user => user.Email == account.Email).ToList();
+                if (account.AcctId == 0 && emailIsInUse.Count != 0)
+                {
+                    
+                    account.LastLoginTime = DateTime.Now;
+                    myLesseeDBContext.Update(account);
+                    myLesseeDBContext.SaveChanges();
+                }
+            }
+            return View(account);
         }
 
-                           
+        // ************************************************* SIGN UP SECTION *************************************************                   
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -93,7 +102,9 @@ namespace ASPNET_FP.Controllers
             //Add new account to Database
             if (ModelState.IsValid)
             {
-                if (account.AcctId == 0)
+                //Validate email is not in use
+                var emailIsInUse = myLesseeDBContext.Accounts.Where(user => user.Email == account.Email).ToList();  
+                if (account.AcctId == 0 && emailIsInUse.Count == 0)
                 {
                     account.CreationTime = DateTime.Now;
                     account.LastLoginTime = DateTime.Now;

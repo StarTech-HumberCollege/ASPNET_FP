@@ -1,12 +1,1 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace ASPNET_FP.Controllers
-{
-	public class ListingController : Controller
-	{
-		public IActionResult Index()
-		{
-			return View();
-		}
-	}
-}
+﻿using ASPNET_FP.Data;using ASPNET_FP.Models;using Microsoft.AspNetCore.Mvc;using Microsoft.EntityFrameworkCore;namespace ASPNET_FP.Controllers{	public class ListingController : Controller	{		private readonly MyLesseeDBContext context;		public ListingController(MyLesseeDBContext myLesseeDBContext)		{			this.context = myLesseeDBContext;		}        public IActionResult Index()        {            var listings = context.Listings                .Include(l => l.HouseType)                .OrderBy(l => l.HouseType)                .ToList();            return View(listings);        }        [HttpGet]        public IActionResult Details(int id)        {            var l = context.Listings.Find(id);            return View(l);        }        [HttpGet]        public IActionResult Add()        {            ViewBag.Action = "Add";            ViewBag.HouseType = context.HouseTypes.OrderBy(ht => ht.Type).ToList();            return View("Edit", new Listing());        }        [HttpGet]        public IActionResult Edit(int id)        {            ViewBag.Action = "Edit";            ViewBag.HouseType = context.HouseTypes.OrderBy(ht => ht.Type).ToList();            var l = context.Listings.Find(id);            return View(l);        }        [HttpPost]        public IActionResult Edit(Listing l)        {            if (ModelState.IsValid)            {                if (l.ListingId == 0)                    context.Listings.Add(l);                else                    context.Listings.Update(l);                context.SaveChanges();                return RedirectToAction("Index", "Listing");            }            else            {                ViewBag.Action = (l.ListingId == 0) ? "Add" : "Edit";                ViewBag.Genres = context.HouseTypes.OrderBy(ht => ht.Type).ToList();                return View(l);            }        }        [HttpGet]        public IActionResult Delete(int id)        {            var l = context.Listings.Find(id);            return View(l);        }        [HttpPost]        public IActionResult Delete(Listing l)        {            context.Listings.Remove(l);            context.SaveChanges();            return RedirectToAction("Index", "Listing");        }    }}
