@@ -70,7 +70,7 @@ namespace ASPNET_FP.Migrations
                 name: "Messages",
                 columns: table => new
                 {
-                    NoteID = table.Column<int>(type: "int", nullable: false)
+                    MessageID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ReceiverID = table.Column<int>(type: "int", nullable: false),
                     SenderID = table.Column<int>(type: "int", nullable: false),
@@ -79,7 +79,7 @@ namespace ASPNET_FP.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Messages", x => x.NoteID);
+                    table.PrimaryKey("PK_Messages", x => x.MessageID);
                 });
         }
 

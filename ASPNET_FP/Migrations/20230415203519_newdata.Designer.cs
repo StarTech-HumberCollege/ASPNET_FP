@@ -4,6 +4,7 @@ using ASPNET_FP.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNET_FP.Migrations
 {
     [DbContext(typeof(MyLesseeDBContext))]
-    partial class MyLesseeDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230415203519_newdata")]
+    partial class newdata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,10 +66,10 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             AcctId = 1001,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4303),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(864),
                             Email = "beltranalvaro08@gmail.com",
                             Gender = "Male",
-                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4344),
+                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(898),
                             Name = "Alvaro Beltran",
                             Password = "alvaro1234",
                             Phone = 123456789L
@@ -74,10 +77,10 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             AcctId = 1002,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4347),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(900),
                             Email = "tuyichen90@gmail.com",
                             Gender = "Female",
-                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4349),
+                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(902),
                             Name = "Tuyi Chen",
                             Password = "tuyi1234",
                             Phone = 123456789L
@@ -85,10 +88,10 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             AcctId = 1003,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4397),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(904),
                             Email = "katya.menesesr@gmail.com",
                             Gender = "Female",
-                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4399),
+                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(906),
                             Name = "Katya Meneses",
                             Password = "katya1234",
                             Phone = 123456789L
@@ -96,10 +99,10 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             AcctId = 1004,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4401),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(957),
                             Email = "antonvinokurov101@gmail.com",
                             Gender = "Male",
-                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4403),
+                            LastLoginTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(959),
                             Name = "Anton Vinokurov",
                             Password = "anton1234",
                             Phone = 123456789L
@@ -254,7 +257,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful detached house with simple furniture provided",
                             HouseTypeId = 1,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4717),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1172),
                             ParkingNo = 3,
                             RentalPrice = 2400.0,
                             Status = true,
@@ -270,7 +273,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful semi-detached house with simple furniture provided",
                             HouseTypeId = 2,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4723),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1177),
                             ParkingNo = 2,
                             RentalPrice = 2300.0,
                             Status = true,
@@ -286,7 +289,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful townhouse with simple furniture provided",
                             HouseTypeId = 3,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4727),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1180),
                             ParkingNo = 2,
                             RentalPrice = 2300.0,
                             Status = true,
@@ -302,7 +305,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful Bungalow",
                             HouseTypeId = 4,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4729),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1182),
                             ParkingNo = 1,
                             RentalPrice = 2200.0,
                             Status = true,
@@ -318,7 +321,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful split-level House",
                             HouseTypeId = 5,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4732),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1185),
                             ParkingNo = 1,
                             RentalPrice = 2200.0,
                             Status = true,
@@ -334,7 +337,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful cottage with a small yard",
                             HouseTypeId = 6,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4734),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1187),
                             ParkingNo = 2,
                             RentalPrice = 2800.0,
                             Status = true,
@@ -350,7 +353,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful condominium with security",
                             HouseTypeId = 7,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4737),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1189),
                             ParkingNo = 1,
                             RentalPrice = 1800.0,
                             Status = true,
@@ -366,7 +369,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Beautiful apartment",
                             HouseTypeId = 8,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4739),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1191),
                             ParkingNo = 1,
                             RentalPrice = 1600.0,
                             Status = true,
@@ -382,7 +385,7 @@ namespace ASPNET_FP.Migrations
                             Description = "Nothing special",
                             HouseTypeId = 9,
                             LandlordId = 1,
-                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4742),
+                            ListingTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1194),
                             ParkingNo = 3,
                             RentalPrice = 2400.0,
                             Status = true,
@@ -421,7 +424,7 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             MessageID = 2001,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4640),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1110),
                             MessageString = "Hi Alvaro! I was referred to you by Anton, told me you’re looking to rent your... ",
                             ReceiverID = 1001,
                             SenderID = 1002
@@ -429,7 +432,7 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             MessageID = 2002,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4644),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1114),
                             MessageString = "Hey man, i have someone interested in your apartment, she will contact you. ",
                             ReceiverID = 1001,
                             SenderID = 1004
@@ -465,7 +468,7 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             NoteId = 1001,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4662),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1131),
                             NotificationString = "Tuyi sent you a friend request",
                             ReceiverId = 1001,
                             SenderId = 1002
@@ -473,7 +476,7 @@ namespace ASPNET_FP.Migrations
                         new
                         {
                             NoteId = 1002,
-                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 50, 991, DateTimeKind.Local).AddTicks(4666),
+                            CreationTime = new DateTime(2023, 4, 15, 16, 35, 19, 526, DateTimeKind.Local).AddTicks(1134),
                             NotificationString = "Katya published a new listing",
                             ReceiverId = 1001,
                             SenderId = 1003

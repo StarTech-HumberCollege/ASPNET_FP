@@ -23,7 +23,7 @@ namespace ASPNET_FP.Controllers
             //this.myLesseeDBContext = myLesseeDBContext;
         }
 
-        // ************************************************* LOGIN UP SECTION ************************************************* 
+        // ************************************************* LOGIN SECTION ************************************************* 
         public IActionResult Login()
         {
             return View();
@@ -57,7 +57,7 @@ namespace ASPNET_FP.Controllers
             }
         }
 
-        // ************************************************* USER UP SECTION ************************************************* 
+        // ************************************************* USER SECTION ************************************************* 
       
         [HttpPost]
         public IActionResult User(Account account)

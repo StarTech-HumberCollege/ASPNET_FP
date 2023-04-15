@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;namespace ASPNET_FP.Models{
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPNET_FP.Models
+{
     public class Listing
     {
         // properties

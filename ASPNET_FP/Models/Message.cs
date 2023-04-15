@@ -4,12 +4,16 @@ namespace ASPNET_FP.Models
 {
 	public class Message
 	{
-        [Key]
-        public int NoteID { get; set; }
-		public int ReceiverID { get; set; }
-		public int SenderID { get; set; }
+		[Key]
+		[Required]
+		public int MessageID { get; set; }
+		[Required]
+        public int ReceiverID { get; set; }
+        [Required]
+        public int SenderID { get; set; }
 		public DateTime CreationTime { get; set; }
-		public string Notification { get; set; }
+        [Required]
+        public string MessageString { get; set; }
 
 		public Message()
 		{
@@ -17,11 +21,11 @@ namespace ASPNET_FP.Models
 		}
 		public Message(int noteID, int receiverID, int senderID, DateTime creationTime, string notification)
 		{
-			this.NoteID = noteID;
+			this.MessageID = noteID;
 			this.ReceiverID = receiverID;
 			this.SenderID = senderID;
 			this.CreationTime = creationTime;
-			this.Notification = notification;
+			this.MessageString = notification;
 		}
 	}
 }
