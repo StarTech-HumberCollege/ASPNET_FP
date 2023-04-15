@@ -13,7 +13,7 @@
         <label asp-for="HouseTypeId">House Type</label>
         <select asp-for="HouseTypeId" class="form-control">
             <option value="">select a house type</option> 
-            @foreach (HouseType ht in ViewBag.HouseType)
+            @foreach (HouseType ht in ViewBag.HouseTypes)
             {
                 <option value="@ht.HouseTypeId">@ht.Type</option>
             }
@@ -56,7 +56,7 @@
     </div>
 
     <input type="hidden" asp-for="ListingId" />
-
+    <br />
     <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
     <a asp-controller="Listing" asp-action="Index" class="btn btn-primary">Cancel</a>
 </form>

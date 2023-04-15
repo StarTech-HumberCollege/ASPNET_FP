@@ -6,7 +6,7 @@
 
 <h2>Details for Listing @Model.ListingId</h2>
 <hr />
-<table>
+<table class="display-listing-details">
     <tr>
         <td>ID</td>
         <td>@Model.ListingId</td>
@@ -17,7 +17,7 @@
     </tr>
     <tr>
         <td>House Type</td>
-        <td>@Model.HouseType</td>
+        <td>@Model.HouseTypeId</td>
     </tr>
     <tr>
         <td>Address</td>
@@ -59,6 +59,12 @@
         <td>Status</td>
         <td>@(Model.Status ? "Active" : "Inactive")</td>
     </tr>
+    <tr>
+        <td></td>
+        <td>
+            <a asp-controller="Listing" asp-action="Edit"
+                asp-route-id="@Model.ListingId" class="btn btn-primary">Edit</a>
+            <a asp-controller="Listing" asp-action="Index" class="btn btn-primary">Back to List</a>
+        </td>
+    </tr>
 </table>
-<hr />
-@Html.ActionLink("Edit", "Edit", "Listing") | @Html.ActionLink("Back to List", "Index", "Listing")

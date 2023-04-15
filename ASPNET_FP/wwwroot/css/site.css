@@ -16,3 +16,25 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+a, button {
+    margin-right: 10px;
+}
+
+.display-listings {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.display-listings th, td {
+    border: 1px solid;
+    padding: 10px;
+}
+
+.display-listing-details {
+    border: none;
+}
+
+.display-listing-details td {
+    border:none;
+}
