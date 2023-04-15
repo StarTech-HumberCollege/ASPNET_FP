@@ -57,7 +57,7 @@ namespace ASPNET_FP.Migrations
 
                     b.HasKey("AcctId");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("Accounts", (string)null);
                 });
 
             modelBuilder.Entity("ASPNET_FP.Models.Address", b =>
@@ -99,7 +99,7 @@ namespace ASPNET_FP.Migrations
 
                     b.HasKey("AddressId");
 
-                    b.ToTable("Addresses");
+                    b.ToTable("Addresses", (string)null);
                 });
 
             modelBuilder.Entity("ASPNET_FP.Models.Image", b =>
@@ -122,7 +122,7 @@ namespace ASPNET_FP.Migrations
 
                     b.HasKey("ImgId");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("ASPNET_FP.Models.Message", b =>
@@ -148,7 +148,7 @@ namespace ASPNET_FP.Migrations
 
                     b.HasKey("NoteID");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 #pragma warning restore 612, 618
         }

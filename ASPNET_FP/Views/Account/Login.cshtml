@@ -1,13 +1,18 @@
-﻿@{
-    ViewBag.Title = "Account Details";
-}
+﻿@using ASPNET_FP.Models.ViewModels
+@model LoginViewModel
 
-<form>
+<form class="row g-3" method="post" asp-action="Login">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    
+    <div class="col-md-6">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email" id="inputEmail">
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Password" class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password" id="inputPassword">
 
-    <label>Email: </label>
-    <input type="email" name="email" placeholder="Enter email here:" /><br /><br />
-    <label>Password: </label>
-    <input type="text" name="password" placeholder="Enter password here:" /><br /><br />
-    <button type="submit">Login</button>
+   
+    <button type="submit" class="btn btn-primary">Sign In</button>
 
 </form>

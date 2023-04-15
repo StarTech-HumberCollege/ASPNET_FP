@@ -1,4 +1,5 @@
 ﻿using ASPNET_FP.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ASPNET_FP.Data
@@ -17,6 +18,11 @@ namespace ASPNET_FP.Data
         public DbSet<Image> Images{ get; set; }
         public DbSet<Message> Messages { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+                       
+        }
 
     }
 }

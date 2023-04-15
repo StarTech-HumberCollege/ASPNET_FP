@@ -16,16 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\OneDrive\Humber\03_Semester_3\ITE5331-Web_App_ASP.NET\Final Project\ASPNET_FP\ASPNET_FP
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/OneDrive/Humber/03_Semester_3/ITE5331-Web_App_ASP.NET/Final Project/ASPNET_FP/ASPNET_FP/Views/Account/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/User/OneDrive/Humber/03_Semester_3/ITE5331-Web_App_ASP.NET/Final Project/ASPNET_FP/ASPNET_FP/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/OneDrive/Humber/03_Semester_3/ITE5331-Web_App_ASP.NET/Final Project/ASPNET_FP/ASPNET_FP/Views/Account/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/OneDrive/Humber/03_Semester_3/ITE5331-Web_App_ASP.NET/Final Project/ASPNET_FP/ASPNET_FP/Views/Account/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/OneDrive/Humber/03_Semester_3/ITE5331-Web_App_ASP.NET/Final Project/ASPNET_FP/ASPNET_FP/Views/Appointment/Calendar.cshtml]

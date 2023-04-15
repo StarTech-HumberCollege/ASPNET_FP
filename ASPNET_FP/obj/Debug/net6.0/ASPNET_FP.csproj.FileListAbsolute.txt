@@ -85,3 +85,4 @@ C:\Users\User\OneDrive\Humber\03_Semester_3\ITE5331-Web_App_ASP.NET\Final Projec
 C:\Users\User\OneDrive\Humber\03_Semester_3\ITE5331-Web_App_ASP.NET\Final Project\ASPNET_FP\ASPNET_FP\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\User\OneDrive\Humber\03_Semester_3\ITE5331-Web_App_ASP.NET\Final Project\ASPNET_FP\ASPNET_FP\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\User\OneDrive\Humber\03_Semester_3\ITE5331-Web_App_ASP.NET\Final Project\ASPNET_FP\ASPNET_FP\obj\Debug\net6.0\ASPNET_FP.csproj.CopyComplete
+C:\Users\User\OneDrive\Humber\03_Semester_3\ITE5331-Web_App_ASP.NET\Final Project\ASPNET_FP\ASPNET_FP\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
