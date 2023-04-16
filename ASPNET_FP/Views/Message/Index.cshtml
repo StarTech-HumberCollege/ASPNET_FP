@@ -1,7 +1,7 @@
 ﻿@model List<ASPNET_FP.Models.ViewModels.MessageViewModel>
 
 
-<h1>Notifications</h1>
+<h1>Messages</h1>
 
 
 <ul class="list-group ">
@@ -27,7 +27,7 @@
 
                         <div class="card-body col-2">
                             @Html.ActionLink("Delete","Delete", new { noteId = messageViewModel.MessageID}, new {@class = "btn btn-primary"})
-
+                            <a class="btn btn-primary mt-1">Reply</a>
                         </div>
                     </div>
                 </div>

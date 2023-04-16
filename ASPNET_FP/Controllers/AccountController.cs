@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Principal;
 using System.Diagnostics;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ASPNET_FP.Controllers
 {
@@ -45,8 +46,18 @@ namespace ASPNET_FP.Controllers
 
             if (ModelState.IsValid)
             {
-                var myAccount = myLesseeDBContext.Accounts.Where(user => user.Email == loginViewModel.Email).ToList();
-               return View("User", myAccount[0]); 
+
+                var myAccount = myLesseeDBContext.Accounts.Where(user => user.Email == loginViewModel.Email).Where(user => user.Password == loginViewModel.Password).ToList();
+                if (!myAccount.IsNullOrEmpty())
+                {
+                    return View("User", myAccount[0]);
+                }
+                else
+                {
+                    return View();
+
+                }
+
 
 
             }
@@ -58,16 +69,16 @@ namespace ASPNET_FP.Controllers
         }
 
         // ************************************************* USER SECTION ************************************************* 
-      
+
         [HttpPost]
         public IActionResult User(Account account)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var emailIsInUse = myLesseeDBContext.Accounts.Where(user => user.Email == account.Email).ToList();
                 if (account.AcctId == 0 && emailIsInUse.Count != 0)
                 {
-                    
+
                     account.LastLoginTime = DateTime.Now;
                     myLesseeDBContext.Update(account);
                     myLesseeDBContext.SaveChanges();
@@ -86,11 +97,12 @@ namespace ASPNET_FP.Controllers
         [HttpPost]
         public IActionResult SignUp(Account account)
         {
-            if(account.AcctId != 0)
+            if (account.AcctId != 0)
             {
                 ViewBag.Success = "created";
                 return View();
-            }else
+            }
+            else
             {
                 return View();
             }
@@ -103,7 +115,7 @@ namespace ASPNET_FP.Controllers
             if (ModelState.IsValid)
             {
                 //Validate email is not in use
-                var emailIsInUse = myLesseeDBContext.Accounts.Where(user => user.Email == account.Email).ToList();  
+                var emailIsInUse = myLesseeDBContext.Accounts.Where(user => user.Email == account.Email).ToList();
                 if (account.AcctId == 0 && emailIsInUse.Count == 0)
                 {
                     account.CreationTime = DateTime.Now;
@@ -112,7 +124,7 @@ namespace ASPNET_FP.Controllers
                     await myLesseeDBContext.SaveChangesAsync();
                 }
             }
-           
+
             return View("SignUp");
 
 

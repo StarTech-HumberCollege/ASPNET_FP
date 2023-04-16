@@ -29,22 +29,23 @@
     <button type="submit" class="btn btn-primary">Listing Filter</button>
 </form><br />
 
-<table class="display-listings">
+<table class="table table-striped">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>House Type</th>
-            <th>Total Area</th>
-            <th>Rental Price</th>
-            <th>Description</th>
-            <th>Status</th>
+            <th scope="col" >ID</th>
+            <th scope="col">House Type</th>
+            <th scope="col">Total Area</th>
+            <th scope="col">Rental Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
         </tr>
     <thead>
     <tbody>
         @foreach (var listing in Model)
         {
             <tr>
-                <td>@listing.ListingId</td>
+                <th scope="row">@listing.ListingId</th>
                 <td>@listing.HouseType.Type</td>
                 <td>@listing.TotalArea</td>
                 <td>@listing.RentalPrice</td>
