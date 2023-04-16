@@ -1,4 +1,6 @@
-# ASPNET_FP
+# ASPNET_FP - House Rental Application
+
+# Group: Tuyi Chen (N01531425), Alvaro Beltran (N01511461)
 
 1. Please install packages with correct versions in Package Manager Console: \
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.5 \
