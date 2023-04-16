@@ -9,5 +9,7 @@ Install-Package Microsoft.AspNetCore.Identity.EntityFrameworkCore -Version 6.0
 
 2. Please make sure the database name of ConnectionStrings/appsettings.json is case-sensitive.
 
-3. Update database before running the project:
+3. Update database before running the project: \
 Update-Database
+
+4. Try to use **Firefox** to see the styles of the web application :)
