@@ -3690,11 +3690,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\ASPNET_FP\\ASPNET_FP\\ASPNET_FP.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\NewFiles\\ASPNET_FP\\ASPNET_FP\\ASPNET_FP.csproj",
       "projectName": "ASPNET_FP",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\ASPNET_FP\\ASPNET_FP\\ASPNET_FP.csproj",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\NewFiles\\ASPNET_FP\\ASPNET_FP\\ASPNET_FP.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\ASPNET_FP\\ASPNET_FP\\obj\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\NewFiles\\ASPNET_FP\\ASPNET_FP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

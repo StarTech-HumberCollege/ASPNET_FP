@@ -1,27 +1,39 @@
-﻿@using ASPNET_FP.Models;
-
-@*
-@{
-	ViewData["Title"] = "Message Center";
-}
-
-<h1>Welcome to message center</h1>
-
-<ul>
-	@foreach (Message message in ViewBag.Messages)
-	{
-		<li>
-			<a asp-controller="Message" asp-action="Details" asp-route-id="@message.NoteID" class="d-flex border rounded ">
-				<h2>Message N°@message.NoteID</h2>
-				<h3>From: @message.ReceiverID</h3>
-				<h3>@message.CreationTime</h3>
-
-			</a>
-		</li>
-
-	}
+﻿@model List<ASPNET_FP.Models.ViewModels.MessageViewModel>
 
 
+<h1>Notifications</h1>
 
 
-</ul>*@
+<ul class="list-group ">
+
+    @foreach (ASPNET_FP.Models.ViewModels.MessageViewModel messageViewModel in Model)
+    {
+        var imageURL = "https://source.unsplash.com/random/201x201/?img=" + messageViewModel.SenderID;
+
+        <li class="list-group-item w-50 " aria-current="true">
+
+            <div class=" d-flex flex-row">
+
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-2 d-flex align-items-center justify-content-center" style="">
+
+                            <img src="@imageURL" class="rounded-circle " alt="..." style="width:65px">
+                        </div>
+                        <div class="card-body col-6">
+                            <h5 class="card-title">@messageViewModel.SenderName</h5>
+                            <p class="card-text">@messageViewModel.MessageString</p>
+                        </div>
+
+                        <div class="card-body col-2">
+                            @Html.ActionLink("Delete","Delete", new { noteId = messageViewModel.MessageID}, new {@class = "btn btn-primary"})
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+    }
+
+</ul>

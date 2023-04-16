@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CR+BPIXdsZ455F7TH5XzsRS6AUAVSQqSZh9OAPJNVyAtPZ/p+igmU7V3WDHp2EQYi3CZgF1EkeFCKMHbkYdM6Q==",
+  "dgSpecHash": "7Vc2JgFiFc8SdnkNfxfQB2RTZgFhtpiAJBFZUsEJoYsDJ8iL1+lZwyX7wIPeSX6OvTvrJmEttdj1KubflydEjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\ASPNET_FP\\ASPNET_FP\\ASPNET_FP.csproj",
+  "projectFilePath": "C:\\Users\\User\\OneDrive\\Humber\\03_Semester_3\\ITE5331-Web_App_ASP.NET\\Final Project\\NewFiles\\ASPNET_FP\\ASPNET_FP\\ASPNET_FP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

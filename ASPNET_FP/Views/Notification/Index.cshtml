@@ -1,29 +1,41 @@
-﻿@model List<Notification>
+﻿@model List<ASPNET_FP.Models.ViewModels.NotificationViewModel>
 
 
+<h1>Notifications</h1>
 
-<ul class="list-group">
-    @foreach (Notification notification in Model)
+
+<ul class="list-group ">
+
+    @foreach (ASPNET_FP.Models.ViewModels.NotificationViewModel notificationViewModel in Model)
     {
-            
-    <li class="list-group-item " aria-current="true">@notification.NotificationString</li>
+        var imageURL = "https://source.unsplash.com/random/201x201/?img=" + notificationViewModel.SenderID;
+
+        <li class="list-group-item w-50 " aria-current="true">
+
+            <div class=" d-flex flex-row">
+
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-2 d-flex align-items-center justify-content-center" style="">
+
+                            <img src="@imageURL" class="rounded-circle " alt="..." style="width:65px">
+                        </div>
+                        <div class="card-body col-6">
+                            <h5 class="card-title">@notificationViewModel.SenderName</h5>
+                            <p class="card-text">@notificationViewModel.NotificationString</p>
+                        </div>
+
+                        <div class="card-body col-2">
+                            @Html.ActionLink("Delete","Delete", new { noteId = notificationViewModel.NoteId}, new {@class = "btn btn-primary"});
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </li>
     }
-    
+
 </ul>
 
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-    </div>
-</div>
+
